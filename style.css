@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Roboto:ital,wght@0,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Roboto+Mono&family=Roboto:ital,wght@0,500;1,700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*medida da caixa pela borda, sempre que utilizar  estilização conta apartir da borda e não do contente*/
+}
+
+/*aplicanco seletores de cores para reusar */
+html{
+  /*variáveis*/
+  --bg-color: #EDF2FF;
+  --text-color: #00082f;
+  --primary-color: #4263eb;
+  --primary-color-dark: #364fc7;
+}
+
+body.dark-blue{
+  --bg-color: #00082f;
+  --text-color: #ffffff;
+}
+body.pink{
+  --bg-color: #fff0f6;
+  --text-color: #1f000b;
+  --primary-color: #d6336c;
+  --primary-color-dark: #A61E4D;
+}
+body.dark-pink{
+  --bg-color: #1F000B;
+  --text-color: #FFF0F6;
+  --primary-color: #d6336c;
+  --primary-color-dark: #A61E4D;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  text-align: center; /*alinhar os itens ao centro no container*/
+  width: 300px;
+  margin: 60px auto;
+}
+
+img{
+  width: 100%; /**100% dos 300 do container*/
+}
+img.avatar{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  border: solid var(--primary-color) 4px;
+}
+
+h1{
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.username{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+ul{
+  list-style: none;
+  margin: 48px 0;
+}
+ul li a { /*busca denro dos UL os LI e nos LI o A */
+  height: 53px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color); /*hex*/
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size:  14px;
+
+  margin-bottom: 16px;
+  border-radius: 6px;
+
+  transition: background 300ms;
+}
+/*Pseudo class*/
+ul li a:hover{
+  background-color: var(--primary-color-dark);
+}
+
+a{
+  text-decoration: none;
+}
+
+footer{
+  font-weight: 500;
+  font-size: 12px;
+  opacity: 0.6;
+  transition: opacity 400ms; /*transição do 0.6 s 1 em 400ms na transição*/
+}
+footer:hover{
+  opacity: 1;
+}
+footer a{ /*permanesse por ser utilizado diferente*/
+  color: var(--text-color);
+}
